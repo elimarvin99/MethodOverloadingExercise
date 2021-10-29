@@ -17,20 +17,16 @@ namespace MethodOverloadingExercise
             var sum = a + b;
             if (isTrue)
             {
-                if (sum == 1)
+                if (sum > 1 || sum <= 0)
                 {
                     //figure out how to do negatives
-                    return $"{a} + {b} = {sum} dollar";
-                }
-                else if (sum > 1 || sum <= 0)
-                {
                     return $"{a} + {b} = {sum} dollars";
                 }
                 else
                 {
-                    return "you have not entered an appropiate sum";
+                    return $"{a} + {b} = {sum} dollar";
                 }
-
+               
             }
             else
             {
