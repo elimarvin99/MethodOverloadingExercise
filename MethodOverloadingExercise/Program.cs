@@ -14,16 +14,23 @@ namespace MethodOverloadingExercise
         }
         public static string Add(int a, int b, bool isTrue)
         {
+            var sum = a + b;
             if (isTrue)
             {
-                if (a + b > 1)
+                if (sum == 1)
                 {
-                    return $"{a} + {b} = {a + b} dollars";
+                    //figure out how to do negatives
+                    return $"{a} + {b} = {sum} dollar";
+                }
+                else if (sum > 1 || sum <= 0)
+                {
+                    return $"{a} + {b} = {sum} dollars";
                 }
                 else
                 {
-                    return $"{a} + {b} = 1 dollar";
+                    return "you have not entered an appropiate sum";
                 }
+
             }
             else
             {
@@ -35,8 +42,8 @@ namespace MethodOverloadingExercise
         
         static void Main(string[] args)
         {
-            var a = 13;
-            var b = 45;
+            var a = -13;
+            var b = 5;
             var c = 23.45m;
             var d = 76.3456m;
             var isTrue = true;
